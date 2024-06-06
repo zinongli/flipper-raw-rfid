@@ -144,7 +144,7 @@ class Rifl:
     @staticmethod
     def _buffers(io: BinaryIO, max_buffer_size: int) -> Generator[BinaryIO, None, None]:
         """
-        Read raw binary buffers  and loop through them
+        Read raw binary buffers and loop through them
 
         Each buffer holds varint (https://github.com/flipperdevices/flipperzero-firmware/blob/dev/lib/toolbox/varint.c#L13) encoded pairs
         """

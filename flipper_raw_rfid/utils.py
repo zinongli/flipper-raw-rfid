@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from itertools import islice, pairwise
+# from itertools import islice, pairwise
+import itertools
+
 from typing import Iterable, Any, Generator, cast
 
 import numpy
@@ -10,6 +12,7 @@ from scipy.ndimage import gaussian_filter1d
 from scipy.signal import find_peaks as scipy_signal_find_peaks
 from scipy.optimize import minimize_scalar
 from skimage.filters import threshold_otsu
+from more_itertools import pairwise
 
 try:
     # python 3.12?
